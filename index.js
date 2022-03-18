@@ -108,7 +108,7 @@ app.use('/get-merit-cert', function(req, res){
           // Serialize the PDFDocument to bytes (a Uint8Array)
           const pdfBytes = await pdfDoc.save()
           await writeFile(__dirname + "/downloads/" + fileName + ".pdf", pdfBytes);
-
+          console.log("File created at: " + __dirname + "/downloads/" + fileName + ".pdf")
          
           res.download(__dirname + "/downloads/" + fileName+ ".pdf", "Certificate-InYPT", function(err) {
             if (err) {
