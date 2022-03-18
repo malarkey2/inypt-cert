@@ -114,9 +114,9 @@ app.use('/get-merit-cert', function(req, res){
             if (err) {
               console.log(err); // Check error if you want
             }
-            unlink(__dirname + "/downloads/" + fileName+ ".pdf", function(){
-                console.log("File was deleted") // Callback
-            });
+            // unlink(__dirname + "/downloads/" + fileName+ ".pdf", function(){
+            //     console.log("File was deleted") // Callback
+            // });
           
           });
            
@@ -176,9 +176,9 @@ app.use('/get-merit-cert', function(req, res){
             if (err) {
               console.log(err); // Check error if you want
             }
-            unlink(__dirname + "/downloads/" + fileName+ ".pdf", function(){
-                console.log("File was deleted") // Callback
-            });
+            // unlink(__dirname + "/downloads/" + fileName+ ".pdf", function(){
+            //     console.log("File was deleted") // Callback
+            // });
           
           });
            
