@@ -35,7 +35,8 @@ const arrParticipants = ["Mehul Borad",
 "Nishantak Panigrahi", 
 "Md.Rehan", 
 "Laksh Sharma", 
-"Arpit Chhabra"
+"Arpit Chhabra",
+"Ahitangni Das"
 ]
 
 const arrTopTen = ["Laksh Sharma", 
@@ -47,7 +48,7 @@ const arrTopTen = ["Laksh Sharma",
 "Dwitimaya Sahoo", 
 "Arpit Chhabra", 
 "Soumendu Jana", 
-"Ahitangani Das"
+"Ahitangni Das"
 ]
 
 app.get('/', function(req, res){
