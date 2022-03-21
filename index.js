@@ -80,7 +80,7 @@ app.use('/get-merit-cert', function(req, res){
     
         try {
     
-          const pdfDoc = await PDFDocument.load(readFileSync("./merit-cert.pdf"));
+          const pdfDoc = await PDFDocument.load(readFileSync(__dirname + "/merit-cert.pdf"));
           const helveticaFont = await pdfDoc.embedFont(StandardFonts.Helvetica)
           
           // Get the first page of the document
@@ -111,6 +111,7 @@ app.use('/get-merit-cert', function(req, res){
           await writeFile(__dirname + "/downloads/" + fileName + ".pdf", pdfBytes);
           console.log("File created at: " + __dirname + "/downloads/" + fileName + ".pdf")
          
+
           res.download(__dirname + "/downloads/" + fileName+ ".pdf", "Certificate-InYPT", function(err) {
             if (err) {
               console.log(err); // Check error if you want
@@ -171,6 +172,7 @@ app.use('/get-merit-cert', function(req, res){
           // Serialize the PDFDocument to bytes (a Uint8Array)
           const pdfBytes = await pdfDoc.save()
           await writeFile(__dirname + "/downloads/" + fileName + ".pdf", pdfBytes);
+          console.log("File created at: " + __dirname + "/downloads/" + fileName + ".pdf")
 
          
           res.download(__dirname + "/downloads/" + fileName+ ".pdf", "Certificate-InYPT", function(err) {
